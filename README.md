@@ -1,6 +1,6 @@
 # trafficology
 
-Using Python 3.11.3
+Using Python 3.11.3, PostgreSQL 16
 
 ## Dev Setup
 
