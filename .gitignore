@@ -175,3 +175,5 @@ fabric.properties
 .idea/modules.xml
 .idea/trafficology.iml
 .idea/.gitignore
+trafficology/trafficology/.my_pgpass
+trafficology/trafficology/.pg_service.conf
