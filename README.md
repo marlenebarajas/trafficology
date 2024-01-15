@@ -9,3 +9,4 @@ Using Python 3.11.3, PostgreSQL 16
 3. Install [poetry](https://python-poetry.org/docs/), `pipx install poetry`
 4. Setup environment variables
 5. Run `poetry install` to install project dependencies
+6. Install [postGIS](https://postgis.net/)
