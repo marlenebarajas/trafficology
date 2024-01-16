@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.11"
 python-dotenv = "^1.0.0"
 psycopg = {extras = ["binary"], version = "^3.1.17"}
+numpy = "^1.26.3"
+django = "^5.0.1"
 
 
 [build-system]
