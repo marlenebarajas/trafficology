@@ -38,13 +38,19 @@ class Junction(models.Model):
     fk_point_b = models.ForeignKey(Freeway, on_delete=models.CASCADE, related_name='junction_b_freeway',
                                    default=0)
 
+    def __str__(self):
+        return self.name
+
 
 class TrafficCondition(models.Model):
     id = models.IntegerField(primary_key=True)
     description = models.TextField(null=False, default='unknown')
 
+    def __str__(self):
+        return self.description
 
-class TrafficChart(models.Model):
+
+class Traffic(models.Model):
     id = models.IntegerField(primary_key=True)
     date_hour = models.DateTimeField(null=False, default=datetime.now)
     fk_point_a = models.ForeignKey(Freeway, on_delete=models.CASCADE, related_name='traffic_a_freeway',
@@ -53,3 +59,7 @@ class TrafficChart(models.Model):
                                    default=0)
     traffic_condition = models.ForeignKey(TrafficCondition, on_delete=models.CASCADE, related_name='traffic_condition',
                                           default=0)
+
+    def __str__(self):
+        return (f'Traffic between {self.fk_point_a.name} and {self.fk_point_a.name} on {self.date_hour} is '
+                f'{self.traffic_condition.description}')
