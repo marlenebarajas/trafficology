@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+      <h1>FREEWAYS!</h1>
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+      <div id="app">
+            [[ greeting ]]
+            {% for freeway in freeway_names %}
+                  <li>{{freeway.name}}</li>
+            {% endfor %}
+
+      </div>
+
+      <script>
+        const { createApp } = Vue
+
+        createApp({
+          data() {
+            return {
+              greeting: "Hi Vue!"
+
+            }
+          },
+          delimiters: ['[[', ']]'],
+        }).mount('#app')
+      </script>
+{% endblock %}
