@@ -18,7 +18,7 @@ description = 'unknown'
 class Freeway(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.TextField(null=False, blank=False, default='Catalina Island')
-    alternate_names = models.JSONField(null=True)
+    alternate_names = models.JSONField(null=True, blank=True)
     start_coordinates = models.TextField(null=False, blank=False, default='33.34281 -118.32785')
     end_coordinates = models.TextField(null=False, blank=False, default='33.34281 -118.32785')
 
